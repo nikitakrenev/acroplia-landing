@@ -32,9 +32,6 @@ class Footer extends React.Component {
                         <h6>{footerSection.support}</h6>
                       </li>
                       <li className="mb-3">
-                        <a href="http://www.gxbventures.com/">www.gxbventures.com</a>
-                      </li>
-                      <li className="mb-5">
                         <a href="mailto:hello@acroplia.com">hello@acroplia.com</a>
                       </li>
                       <li className="mb-4 pt-12">
@@ -72,11 +69,13 @@ class Footer extends React.Component {
                 </div>
                 <div className="col-lg-3">
                   <div className="footer-nav-wrap text-white text-right">
-                    <img
-                      src="img/icons/Gxb-logo.svg"
-                      alt="location map"
-                      className="img-fluid mb-3"
-                    />
+                    <a href="www.gxbventures.com" target="_blank" rel="noopener, noreferrer" title="GXB">
+                      <img
+                          src="img/icons/Gxb-logo.svg"
+                          alt="location map"
+                          className="img-fluid mb-3"
+                      />
+                    </a>
                     <p className="mb-3">© 2020</p>
                     <p className="mb-3">GXB Ventures.</p>
                     <p className="mb-5">{footerSection.allRights}</p>
@@ -89,7 +88,7 @@ class Footer extends React.Component {
                           </a>
                         </li>
                         <li className="list-inline-item mr-3">
-                          <a href="https://vk.com/gxbdev" target="_blank" rel="noopener, noreferrer" title="vkontakte">
+                          <a href="https://vk.com/acroplia" target="_blank" rel="noopener, noreferrer" title="vkontakte">
                             <img src="img/icons/vk.svg"></img>
                           </a>
                         </li>
