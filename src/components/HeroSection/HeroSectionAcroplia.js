@@ -48,7 +48,7 @@ class HeroSection extends React.Component {
                                                 {heroSection.subTitle}
                                             </h3>
 
-                                            <JoinButton title={heroSection.joinButton} target="https://dev.acroplia.com/join"/>
+                                            <JoinButton title={heroSection.joinButton} target="https://acroplia.com/join"/>
 
                                         </div>
                                     </div>

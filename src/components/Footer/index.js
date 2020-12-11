@@ -69,7 +69,7 @@ class Footer extends React.Component {
                 </div>
                 <div className="col-lg-3">
                   <div className="footer-nav-wrap text-white text-right">
-                    <a href="www.gxbventures.com" target="_blank" rel="noopener noreferrer" title="GXB">
+                    <a href="https://www.gxbventures.com" target="_blank" rel="noopener noreferrer" title="GXB">
                       <img
                           src="img/icons/Gxb-logo.svg"
                           alt="location map"
