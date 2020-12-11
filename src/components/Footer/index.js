@@ -50,7 +50,7 @@ class Footer extends React.Component {
                       {/*  <a href="faq">{footerSection.faq}</a>*/}
                       {/*</li>*/}
                       <li className="mb-3">
-                        <a href="https://hh.ru/employer/2510411" target="_blank" rel="noopener, noreferrer">{footerSection.jobs}</a>
+                        <a href="https://hh.ru/employer/2510411" target="_blank" rel="noopener noreferrer">{footerSection.jobs}</a>
                       </li>
                       <li className="mb-3">
                         <a href="privacy">{footerSection.privacy}</a>
@@ -69,7 +69,7 @@ class Footer extends React.Component {
                 </div>
                 <div className="col-lg-3">
                   <div className="footer-nav-wrap text-white text-right">
-                    <a href="www.gxbventures.com" target="_blank" rel="noopener, noreferrer" title="GXB">
+                    <a href="www.gxbventures.com" target="_blank" rel="noopener noreferrer" title="GXB">
                       <img
                           src="img/icons/Gxb-logo.svg"
                           alt="location map"
@@ -83,28 +83,28 @@ class Footer extends React.Component {
                     <div className="social-list-wrap">
                       <ul className="social-list list-inline list-unstyled">
                         <li className="list-inline-item mr-3">
-                          <a href="https://www.instagram.com/acroplia/" target="_blank" rel="noopener, noreferrer" title="Instagram">
-                            <img src="img/icons/instagramm.svg"></img>
+                          <a href="https://www.instagram.com/acroplia/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <img src="img/icons/instagramm.svg" alt="instagram"></img>
                           </a>
                         </li>
                         <li className="list-inline-item mr-3">
-                          <a href="https://vk.com/acroplia" target="_blank" rel="noopener, noreferrer" title="vkontakte">
-                            <img src="img/icons/vk.svg"></img>
+                          <a href="https://vk.com/acroplia" target="_blank" rel="noopener noreferrer" title="vkontakte">
+                            <img src="img/icons/vk.svg" alt="vkontakte"></img>
                           </a>
                         </li>
                         <li className="list-inline-item mr-3">
-                          <a href="https://www.facebook.com/acroplia" target="_blank" rel="noopener, noreferrer" title="Facebook">
-                            <img src="img/icons/fb.svg"></img>
+                          <a href="https://www.facebook.com/acroplia" target="_blank" rel="noopener noreferrer" title="Facebook">
+                            <img src="img/icons/fb.svg" alt="facebook"></img>
                           </a>
                         </li>
                         <li className="list-inline-item mr-3">
-                          <a href="https://twitter.com/Acroplia" target="_blank" rel="noopener, noreferrer" title="Twitter">
-                            <img src="img/icons/twitter.svg"></img>
+                          <a href="https://twitter.com/Acroplia" target="_blank" rel="noopener noreferrer" title="Twitter">
+                            <img src="img/icons/twitter.svg" alt="twitter"></img>
                           </a>
                         </li>
                         <li className="list-inline-item mr-3">
-                          <a href="https://www.youtube.com/channel/UCZ6-9FXRWvU_iL200_Z97DA?view_as=subscriber" target="_blank" rel="noopener, noreferrer" title="Youtube">
-                            <img src="img/icons/youtube.svg"></img>
+                          <a href="https://www.youtube.com/channel/UCZ6-9FXRWvU_iL200_Z97DA?view_as=subscriber" target="_blank" rel="noopener noreferrer" title="Youtube">
+                            <img src="img/icons/youtube.svg" alt="youtube"></img>
                           </a>
                         </li>
                       </ul>
