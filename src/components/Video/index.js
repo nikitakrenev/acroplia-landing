@@ -58,18 +58,6 @@ class Video extends React.Component {
             </div>
           </div>
         </section>
-          <PhotoAuthor>
-            <span className="text-white">
-                Photo by {" "}
-                <a href="https://unsplash.com/@daria_shevtsova?utm_source=unsplash">
-                    Daria Shevtsova
-                </a>
-                {" "} on {" "}
-                <a href="https://unsplash.com/s/photos/people?utm_source=unsplash&">
-                     {" "} Unsplash {" "}
-                </a>
-            </span>
-          </PhotoAuthor>
       </React.Fragment>
     );
   }

@@ -84,18 +84,6 @@ class HeroSection extends React.Component {
                         </div>
                     </div>
                 </section>
-                <PhotoAuthor>
-                    <span className="text-white">
-                        Photo by {" "}
-                        <a href="https://unsplash.com/@kaitlynbaker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                            Kaitlyn Baker
-                        </a>
-                            {" "} on {" "}
-                        <a href="https://unsplash.com/s/photos/security?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                            {" "} Unsplash {" "}
-                        </a>
-                    </span>
-                </PhotoAuthor>
             </React.Fragment>
         );
     }
