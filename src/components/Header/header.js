@@ -73,7 +73,7 @@ class Header extends React.Component {
                   </li>
                   <li className="nav-item d-flex align-items-center">
                     <JoinButton
-                      target="https://dev.acroplia.com/join"
+                      target="https://acroplia.com/join"
                       title={headerSection.joinButton}
                       className="ml-sm-n1 ml-lg-3"
                       ttleClass="nav-link"
