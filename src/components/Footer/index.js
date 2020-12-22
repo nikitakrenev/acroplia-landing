@@ -28,8 +28,9 @@ class Footer extends React.Component {
       <React.Fragment>
         <footer className="footer-section">
           <div className="cookie-notification" style={{display: this.state.showNotification}}>
-            <p>{footerSection.cookie}</p>
-            <button type="button" className="btn solid-btn join-button" onClick={() => accept()}>Accept</button>
+            <p>
+              This website uses Cookies  to improve your experience. See our <a style={{textDecoration: 'underline', color: '#262626'}} href='https://welcome.acroplia.com/terms-of-use/' target='_blank'>Privacy Policy</a> to learn more</p>
+            <button type="button" className="btn solid-btn" onClick={() => accept()}>Accept</button>
           </div>
           <div
             className={"footer-top background-img-2 " + (this.props.noSubscription ? 'py-5' : 'pt-150 pb-5')}

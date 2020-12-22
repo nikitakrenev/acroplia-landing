@@ -142,7 +142,7 @@ small, .text_small {
     font-size: 0.8em;
 }
 a{
-    text-decoration: none !important;
+    text-decoration: none;
     background-color: transparent;
     transition: all .3s ease-in-out;
 }
@@ -2937,25 +2937,34 @@ blockquote:before {
 ============================================*/
 
 .cookie-notification {
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: baseline;
     position: fixed;
-    bottom: 15px;
-    left: 50%;
-    width: 900px;
-    max-width: 90%;
-    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
     padding: 25px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.85);
     z-index: 10;
 }
 
 .cookie-notification p{
-    margin: 0;
-    font-size: 0.7rem;
-    text-align: left;
+    margin-right: 45px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #262626;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+.cookie-notification button{
+    padding: 1px 39px;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .background-img-2{
