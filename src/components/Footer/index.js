@@ -3,13 +3,34 @@ import {GetWords} from "../../data/lang/LangStore";
 import {connect} from "react-redux";
 
 class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { showNotification: '' };
+  }
+
+  componentDidMount() {
+    this.acceptCookie();
+  }
+
+  acceptCookie = () => {
+    const cookie = localStorage.getItem('cookieDate');
+    !cookie ? this.setState({showNotification: 'flex'}) : this.setState({showNotification: 'none'});
+  }
 
   render() {
     const words = GetWords(this.props.language);
     const footerSection = words.footer;
+    const accept = () => {
+      localStorage.setItem('cookieDate', `${Date.now()}`);
+      this.acceptCookie();
+    }
     return (
       <React.Fragment>
         <footer className="footer-section">
+          <div className="cookie-notification" style={{display: this.state.showNotification}}>
+            <p>{footerSection.cookie}</p>
+            <button type="button" className="btn solid-btn join-button" onClick={() => accept()}>Accept</button>
+          </div>
           <div
             className={"footer-top background-img-2 " + (this.props.noSubscription ? 'py-5' : 'pt-150 pb-5')}
           >

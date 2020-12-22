@@ -2936,6 +2936,28 @@ blockquote:before {
             15. FOOTER CSS
 ============================================*/
 
+.cookie-notification {
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    width: 900px;
+    max-width: 90%;
+    transform: translateX(-50%);
+    padding: 25px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.cookie-notification p{
+    margin: 0;
+    font-size: 0.7rem;
+    text-align: left;
+}
+
 .background-img-2{
     position: relative;
     display: block;
