@@ -98,7 +98,7 @@ class Footer extends React.Component {
                           className="img-fluid mb-3"
                       />
                     </a>
-                    <p className="mb-3">© 2020</p>
+                    <p className="mb-3">© 2021</p>
                     <p className="mb-3">GXB Ventures.</p>
                     <p className="mb-5">{footerSection.allRights}</p>
 
