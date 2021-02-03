@@ -50,13 +50,13 @@ class Screenshots extends React.Component {
                       className="mr-5"
                       imageSrc="/img/icons/Google-play.svg"
                       alt="Get it on Google Play"
-                      url="https://play.google.com/store/apps/details?id=com.gxbventures.acroplia&hl=ru"
+                      url="https://play.google.com/store/apps/details?id=com.gxbventures.acroplia"
                   />
                   <DownloadButton
                       className="ml-5"
                       imageSrc="/img/icons/Appstore.svg"
                       alt="Download on the App Store"
-                      url="https://apps.apple.com/us/app/acroplia/id1345316411?l=ru&ls=1"
+                      url="https://apps.apple.com/us/app/acroplia/id1345316411"
                   />
                 </div>
               </div>
