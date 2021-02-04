@@ -3,6 +3,7 @@ import { GetWords } from "../../data/lang/LangStore";
 import { connect } from "react-redux";
 import { OrgBenefits } from "./orgBenefits";
 import { IndividualBenefits } from "./individualBenefits";
+import PricingSubHeader from "./pricingSubHeader";
 
 class PricingAcroplia extends React.Component {
   constructor(props) {
@@ -54,6 +55,7 @@ class PricingAcroplia extends React.Component {
     return (
       <React.Fragment>
         <div className="overflow-hidden">
+          <PricingSubHeader/>
           <section
             id="pricing"
             className={"package-section " + this.props.className + (this.props.bgColor && this.props.bgColor === 'gray' ? ' gray-light-bg' : ' background-shape-right')} >
