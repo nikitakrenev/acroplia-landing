@@ -50,12 +50,13 @@ class PricingAcroplia extends React.Component {
     const {isPricingPage} = this.props;
     const words = GetWords(this.props.language);
     const priceSection = words.pricing;
+    const isPricing = window.location.pathname.includes('/pricing');
 
     const pricePackages = this.state.forOrg ? priceSection.packages.filter(item => !!item.isOrg) : priceSection.packages.filter(item => !item.isOrg) || [];
     return (
       <React.Fragment>
         <div className="overflow-hidden">
-          <PricingSubHeader/>
+          {!isPricing && <PricingSubHeader/>}
           <section
             id="pricing"
             className={"package-section " + this.props.className + (this.props.bgColor && this.props.bgColor === 'gray' ? ' gray-light-bg' : ' background-shape-right')} >
