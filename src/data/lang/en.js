@@ -114,9 +114,7 @@ export const EnLang = {
         packages: [
             {
                 price: "$0",
-                priceOrg: "$0",
                 yearPrice: "$0",
-                yearPriceOrg: "",
                 license: "FREE",
                 isFeatured: false,
                 addFeatures: "",
@@ -131,13 +129,13 @@ export const EnLang = {
             },
             {
                 price: "$9.95/",
-                priceOrg: "$9.95/",
                 yearPrice: "$7.95/",
-                yearPriceOrg: "$7.95/",
+                yearPriceMember: "$95,40/year",
                 license: "Basic Member",
                 isFeatured: false,
                 yearFeatured: true,
                 addFeatures: "First 14 days for free",
+                profitYear: true,
                 features: [
                     "For 1 user",
                     "Max. 25 participants in calls",
@@ -149,13 +147,13 @@ export const EnLang = {
             },
             {
                 price: "$19.95/",
-                priceOrg: "$19.95/",
                 yearPrice: "$14.95/",
-                yearPriceOrg: "$14.95/",
+                yearPriceMember: "$179,40/year",
                 license: "Family",
                 isFeatured: false,
                 yearFeatured: true,
                 addFeatures: "First 14 days for free",
+                profitYear: true,
                 features: [
                     "For up to 6 users",
                     "Max. 50 participants in calls",
@@ -166,47 +164,39 @@ export const EnLang = {
                 ]
             },
             {
-                price: "$19.95",
-                yearPrice: "$14.95",
-                license: "Family",
+                price: "$0",
+                yearPrice: "$0",
+                license: "FREE",
                 isFeatured: false,
+                addFeatures: "",
                 isOrg: true,
                 features: [
-                    "For up to 6 users",
-                    "Max. 50 participants in calls",
+                    "Max. 10 participants in calls",
+                    "40 min maximum call length",
+                    "Max data uploaded 1GB/ month",
+                    "1GB Drive + content Storage",
+                    "Limit for message history - 10 000",
+                    "Only admin can start a call",
+                ]
+            },
+            {
+                price: "$60/",
+                yearPrice: "$60/",
+                priceMember: "* +5$ per each member",
+                yearPriceMember: "* +4$ per each member",
+                license: "Team",
+                isFeatured: false,
+                addFeatures: "First 14 days for free",
+                isOrg: true,
+                profit: true,
+                profitYear: true,
+                features: [
+                    "Max. 150 participants in calls",
                     "Unlimited call length",
-                    "1TB Drive + content Storage/member",
+                    "Max data uploaded 1TB/month",
+                    "Unlimited Drive + content Storage",
                     "Unlimited message history",
-                    "Max data uploaded 20GB/month",
-                ]
-            },
-            {
-                price: "$19.95",
-                yearPrice: "$19.95",
-                // coloredPrice: true,
-                license: "Education",
-                isFeatured: false,
-                isOrg: true,
-                features: [
-                    "+10 student’s accounts per leader - month to month",
-                    "+50 student’s accounts per leader - annual plan",
-                    "Only paid leader, not students can start calls",
-                    "HD Recording Quality",
-                    "Unlimited Drive + content Storage"
-                ]
-            },
-            {
-                price: "$60*",
-                yearPrice: "$50**",
-                subPrice: ["* +$5 per each member", "** +$4 per each member"],
-                license: "Work Group",
-                isFeatured: false,
-                isOrg: true,
-                features: [
-                    "UHD featured video streams",
-                    "Record individual streams",
-                    "Up to HD (UHD extra) High Quality Video Calls",
-                    "cloud recording storage & processing <1GB/month/member"
+                    "Any member can start a call"
                 ]
             }
         ],

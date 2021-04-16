@@ -76,10 +76,10 @@ class PricingAcroplia extends React.Component {
     return (
       <React.Fragment>
         <div className="overflow-hidden">
-          {!isPricing && <PricingSubHeader/>}
           <section
             id="pricing"
             className={"package-section " + this.props.className + (this.props.bgColor && this.props.bgColor === 'gray' ? ' gray-light-bg' : ' background-shape-right')} >
+            <div className="text-center pb-4 price-sub-title">{priceSection.freePriceTitle}</div>
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-md-8">
@@ -117,6 +117,7 @@ class PricingAcroplia extends React.Component {
             <div className="container">
               <div className="row justify-content-center">
                 {pricePackages.map((_package, index) => {
+                  const link = index === 0 ? "https://acroplia.com/login" : "/pricing";
                   return (
                     <div className="col-lg-4 col-xl-4 col-md-12 mb-5 pricing-item" key={index}>
                       <div
@@ -125,7 +126,21 @@ class PricingAcroplia extends React.Component {
                           (_package.isFeatured ? "popular-price" : "")
                         }
                       >
-                        <div className="pt-4">
+                        {_package.profit &&
+                          <img
+                              src="img/Group946.png"
+                              alt="pricing img"
+                              className="price-profit"
+                          />
+                        }
+                        {_package.profitYear && this.state.annually &&
+                        <img
+                            src="img/Group946.png"
+                            alt="pricing img"
+                            className="price-profit"
+                        />
+                        }
+                        <div className="pt-3">
                           <h5 className="card-title">{_package.license}</h5>
                         </div>
                         <div className="pricing-img mt-4">
@@ -142,7 +157,7 @@ class PricingAcroplia extends React.Component {
                           }
                         </div>
                         <div className="card-header py-4 border-0 pricing-header">
-                          <div className="d-flex justify-content-center">
+                          <div className="d-flex flex-md-column justify-content-center">
                             <div className="h1 text-center mb-0">
                               {_package.coloredPrice
                                   ? <span className="price color-primary h3">{this.state.annually ? _package.yearPrice : _package.price}</span>
@@ -152,10 +167,11 @@ class PricingAcroplia extends React.Component {
                               }
                               {index !== 0 && <span className="price-month-tag">{"month"}</span>}
                             </div>
+                            <span className="sub-price">{this.state.annually ? _package.yearPriceMember : _package.priceMember}</span>
                           </div>
                         </div>
 
-                        <div className="card-body d-flex flex-column justify-content-between pl-3 pr-3">
+                        <div className="card-body d-flex flex-column justify-content-between align-items-center pl-3 pr-3">
                           {/*<p className="mb-5 mb-md-0"/>*/}
                           {/*{(_package.addFeatures) ? <div className="mb-2 color-primary">*/}
                           {/*  <span>{_package.addFeatures}</span>*/}
@@ -175,30 +191,32 @@ class PricingAcroplia extends React.Component {
                           {
                             !isPricingPage ?
                                 <a
-                                    href="/pricing"
+                                    href={link}
                                     className={
                                       "btn mb-3 " +
                                       (_package.isFeatured
                                           ? "solid-btn"
                                           : "outline-btn")
                                     }
+                                    style={{width: '143px'}}
                                     onClick={(event => this.showBenefits(event))}
                                 >
-                                  {_package.isFeatured ? priceSection.toTry: priceSection.signIn }
+                                  {index === 0 ? priceSection.signIn: priceSection.toTry}
                                 </a>
                                 :
                                 <>
                                   <a
-                                      href="/pricing"
+                                      href={link}
                                       className={
                                         "btn mb-3 hide-on-sm " +
                                         (_package.isFeatured
                                             ? "solid-btn"
                                             : "outline-btn")
                                       }
+                                      style={{width: '143px'}}
                                       onClick={(event => this.showBenefits(event))}
                                   >
-                                    {_package.isFeatured ? priceSection.toTry: priceSection.signIn}
+                                    {index === 0 ? priceSection.signIn: priceSection.toTry}
                                   </a>
 
                                   <a
@@ -225,6 +243,13 @@ class PricingAcroplia extends React.Component {
                   );
                 })}
               </div>
+              {!isPricing && (
+                  <div className="more-details">
+                    <a href="/pricing" className="price-more-details">
+                      {"See more details"}
+                    </a>
+                  </div>
+              )}
               {isPricingPage && <div className="mt-5">
 
                 <div
