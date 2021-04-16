@@ -172,11 +172,6 @@ class PricingAcroplia extends React.Component {
                         </div>
 
                         <div className="card-body d-flex flex-column justify-content-between align-items-center pl-3 pr-3">
-                          {/*<p className="mb-5 mb-md-0"/>*/}
-                          {/*{(_package.addFeatures) ? <div className="mb-2 color-primary">*/}
-                          {/*  <span>{_package.addFeatures}</span>*/}
-                          {/*</div> : <p className="mb-5 mb-md-0"/>}*/}
-
                           <ul className="list-unstyled text-sm mb-4 pricing-feature-list">
                             {_package.subPrice && _package.subPrice.map((_subPrice, index, array) => {
                               const className = index === array.length-1 ? "mb-2 mt-n2" : "";
