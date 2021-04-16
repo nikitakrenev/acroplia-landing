@@ -4,27 +4,17 @@ import { connect } from "react-redux";
 import { OrgBenefits } from "./orgBenefits";
 import { IndividualBenefits } from "./individualBenefits";
 import PricingSubHeader from "./pricingSubHeader";
+import Switch from '@material-ui/core/Switch';
+import { withStyles } from '@material-ui/core/styles';
 
 class PricingAcroplia extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       forOrg: false,
-      anually: false
+      annually: false
     }
 
-  }
-
-  handleCheck() {
-    this.setState({
-      forOrg: !this.state.forOrg
-    })
-  }
-
-  handleCheckAnually() {
-    this.setState({
-      anually: !this.state.anually
-    })
   }
 
   showBenefits(event) {
@@ -51,6 +41,36 @@ class PricingAcroplia extends React.Component {
     const words = GetWords(this.props.language);
     const priceSection = words.pricing;
     const isPricing = window.location.pathname.includes('/pricing');
+
+    const handleCheck = () => {
+      this.setState({
+        forOrg: !this.state.forOrg
+      })
+    }
+
+    const handleCheckAnnually = () => {
+      this.setState({
+        annually: !this.state.annually
+      })
+    }
+
+    const Switcher = withStyles({
+      switchBase: {
+        color: '#0A4CB0',
+        '$track': {
+          backgroundColor: '#ADADAD',
+        },
+        '&$checked': {
+          color: '#287EFF',
+        },
+        '&$checked + $track': {
+          backgroundColor: '#D4E8FF',
+        },
+      },
+      checked: {},
+      track: {},
+    })(Switch);
+
 
     const pricePackages = this.state.forOrg ? priceSection.packages.filter(item => !!item.isOrg) : priceSection.packages.filter(item => !item.isOrg) || [];
     return (
@@ -82,16 +102,16 @@ class PricingAcroplia extends React.Component {
 
               <div className={"row justify-content-center mb-5 price-switch ml-4 mr-4 " + (isPricingPage ? "light-blue-bg" : "")}>
                 <div className="custom-control custom-switch d-flex align-items-center justify-content-center pricing-switch pt-4 pb-4">
-                  <label className={!this.state.forOrg ? " blue-dark" : ""} htmlFor="customSwitch1">{priceSection.individualButtonTitle}</label>
-                  <input type="checkbox" className="custom-control-input" id="customSwitch1" onChange={() => this.handleCheck()} checked={this.state.forOrg}/>
-                  <label className={"custom-control-label ml-5 " + (this.state.forOrg ? " blue-dark" : "")} htmlFor="customSwitch1">{priceSection.organizationButtonTitle}</label>
+                  <label className={!this.state.forOrg ? "label-checked-dark" : "label-unchecked"} htmlFor="customSwitch1">{priceSection.individualButtonTitle}</label>
+                  <Switcher checked={this.state.forOrg} onChange={handleCheck} name="checkedA" />
+                  <label className={this.state.forOrg ? "label-checked-light" : "label-unchecked"} htmlFor="customSwitch1">{"Communities"}</label>
                 </div>
 
 
                 <div className="custom-control custom-switch d-flex align-items-center justify-content-center pricing-switch pt-4 pb-4">
-                  <label className={!this.state.anually ? " blue-dark" : ""} htmlFor="customSwitch2">{priceSection.monthlyBillButtonTitle}</label>
-                  <input type="checkbox" className="custom-control-input" id="customSwitch2" onChange={() => this.handleCheckAnually()} checked={this.state.anually}/>
-                  <label className={"custom-control-label ml-5 " + (this.state.anually ? " blue-dark" : "")} htmlFor="customSwitch2">{priceSection.anuallyBillButtonTitle}</label>
+                  <label className={!this.state.annually ? "label-checked-dark" : "label-unchecked"} htmlFor="customSwitch2">{priceSection.monthlyBillButtonTitle}</label>
+                  <Switcher checked={this.state.annually} onChange={handleCheckAnnually} name="checkedA" />
+                  <label className={this.state.annually ? "label-checked-light" : "label-unchecked"} htmlFor="customSwitch2">{priceSection.anuallyBillButtonTitle}</label>
                 </div>
               </div>
             <div className="container">
@@ -106,7 +126,7 @@ class PricingAcroplia extends React.Component {
                         }
                       >
                         <div className="pt-4">
-                          <h5>{_package.license}</h5>
+                          <h5 className="card-title">{_package.license}</h5>
                         </div>
                         <div className="pricing-img mt-4">
                           {(_package.isOrg) ? <img
@@ -125,12 +145,12 @@ class PricingAcroplia extends React.Component {
                           <div className="d-flex justify-content-center">
                             <div className="h1 text-center mb-0">
                               {_package.coloredPrice
-                                  ? <span className="price color-primary h3">{this.state.anually ? _package.yearPrice : _package.price}</span>
-
-                                  : <span className="price">
-                                    {this.state.anually ? _package.yearPrice : _package.price}
-                                  </span>}
-
+                                  ? <span className="price color-primary h3">{this.state.annually ? _package.yearPrice : _package.price}</span>
+                                  : <span className="price" style={{color: '#262626'}}>
+                                      {this.state.annually ? _package.yearPrice : _package.price}
+                                    </span>
+                              }
+                              {index !== 0 && <span className="price-month-tag">{"month"}</span>}
                             </div>
                           </div>
                         </div>
@@ -142,8 +162,6 @@ class PricingAcroplia extends React.Component {
                           {/*</div> : <p className="mb-5 mb-md-0"/>}*/}
 
                           <ul className="list-unstyled text-sm mb-4 pricing-feature-list">
-                            {(_package.addFeatures) && <li className="mb-2 color-primary">{_package.addFeatures}</li>}
-
                             {_package.subPrice && _package.subPrice.map((_subPrice, index, array) => {
                               const className = index === array.length-1 ? "mb-2 mt-n2" : "";
                               return <li className={className} key={_subPrice}>{_subPrice}</li>
@@ -166,7 +184,7 @@ class PricingAcroplia extends React.Component {
                                     }
                                     onClick={(event => this.showBenefits(event))}
                                 >
-                                  {priceSection.learnMore}
+                                  {_package.isFeatured ? priceSection.toTry: priceSection.signIn}
                                 </a>
                                 :
                                 <>
@@ -180,7 +198,7 @@ class PricingAcroplia extends React.Component {
                                       }
                                       onClick={(event => this.showBenefits(event))}
                                   >
-                                    {priceSection.learnMore}
+                                    {_package.isFeatured ? priceSection.toTry: priceSection.signIn}
                                   </a>
 
                                   <a
@@ -193,11 +211,14 @@ class PricingAcroplia extends React.Component {
                                             : "outline-btn")
                                       }
                                   >
-                                    {priceSection.learnMore}
+                                    {priceSection.signIn}
                                   </a>
                                 </>
                           }
-
+                          {(_package.addFeatures)
+                              ? <span className="mb-2 color-primary">{_package.addFeatures}</span>
+                              : <div style={{height: '33.5px'}}></div>
+                          }
                         </div>
                       </div>
                     </div>

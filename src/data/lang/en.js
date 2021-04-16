@@ -107,6 +107,8 @@ export const EnLang = {
         month: "month",
         perYear: "if pay per year",
         learnMore: "Learn more",
+        signIn: "Sing in",
+        toTry: "Try",
         seeMoreDetails : "See more details",
         benefitsComparisonList: "Benefits comparison list",
         packages: [
@@ -119,28 +121,48 @@ export const EnLang = {
                 isFeatured: false,
                 addFeatures: "",
                 features: [
-                    "Take Notes, Ideaboards, Annotated PDF's *(Limited by storage)",
-                    "High Quality Video Calls",
-                    "No message limits",
+                    "For 1 user",
+                    "Max. 10 participants in calls",
+                    "40 min maximum call length",
                     "1GB Drive + content Storage",
-                    "Support by chat, email and forums",
-                    "40min maximum call length",
+                    "Limit for message history - 10 000",
+                    "Max data uploaded 1GB/ month",
                 ]
             },
             {
-                price: "$9.95",
-                priceOrg: "$9.95",
-                yearPrice: "$7.95",
-                yearPriceOrg: "$7.95",
+                price: "$9.95/",
+                priceOrg: "$9.95/",
+                yearPrice: "$7.95/",
+                yearPriceOrg: "$7.95/",
                 license: "Basic Member",
                 isFeatured: false,
-                addFeatures: "All free benefits",
+                yearFeatured: true,
+                addFeatures: "First 14 days for free",
                 features: [
+                    "For 1 user",
+                    "Max. 25 participants in calls",
                     "Unlimited call length",
-                    "HD featured video streams",
-                    "Recordings Storage <1TB/month",
-                    "Full resolution image compression",
-                    "Max data uploaded 10GB",
+                    "1TB Drive + content Storage",
+                    "Unlimited message history",
+                    "Max data uploaded 10GB/month",
+                ]
+            },
+            {
+                price: "$19.95/",
+                priceOrg: "$19.95/",
+                yearPrice: "$14.95/",
+                yearPriceOrg: "$14.95/",
+                license: "Family",
+                isFeatured: false,
+                yearFeatured: true,
+                addFeatures: "First 14 days for free",
+                features: [
+                    "For up to 6 users",
+                    "Max. 50 participants in calls",
+                    "Unlimited call length",
+                    "1TB Drive + content Storage/member",
+                    "Unlimited message history",
+                    "Max data uploaded 20GB/month",
                 ]
             },
             {
@@ -150,12 +172,12 @@ export const EnLang = {
                 isFeatured: false,
                 isOrg: true,
                 features: [
-                    "Any member can start calls",
-                    "UHD featured video streams (1-4)",
-                    "Full resolution image compression",
-                    "No message limits",
-                    "Drive + content Storage 1TB/member",
-                    "20GB Maximum data uploaded per month",
+                    "For up to 6 users",
+                    "Max. 50 participants in calls",
+                    "Unlimited call length",
+                    "1TB Drive + content Storage/member",
+                    "Unlimited message history",
+                    "Max data uploaded 20GB/month",
                 ]
             },
             {
@@ -339,5 +361,42 @@ export const EnLang = {
         confirm2: "I have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law",
         confirm3: "I certify under penalty of perjury that the information in this complaint is accurate and that I am the copyright owner or am authorized to act on the copyright owner's behalf.",
         submit: "Submit"
+    },
+    faq: {
+        aboutAcroplia: {
+            title: "About Acroplia",
+            whatIsAcroplia: {
+                title: "What is Acroplia?",
+                description1: "Acroplia is an Active Collaboration Platform for all sphere specialists and enthusiasts. Acroplia is a comprehensive and intuitive life-long platform that serves different purposes: learning, coworking, communication, etc. Members are easily able to create, monitor, and share many types of content that can be created right on our platform: notes, idea boards, pdf boards.",
+                description2: "We provide a lot of different functions to make the work of our users as comfortable as possible. Now you don't need to use other programs, you can do everything in one, in Acroplia. Create content during a video call with your coworkers, share it, chat together, and do it all at the same time.",
+                description3: "This is what Acroplia is - the whole world in one tab.",
+            },
+            howToContactUs: {
+                description1: "You can contact us via:",
+                description2: "-Email: support@gxbventures.com",
+                description3: "Or by using one of following forms:",
+            }
+        },
+        account: {
+
+        },
+        people: {
+
+        },
+        community: {
+
+        },
+        createContent: {
+
+        },
+        videoconference: {
+
+        },
+        pricing: {
+
+        },
+        other: {
+
+        },
     }
 };

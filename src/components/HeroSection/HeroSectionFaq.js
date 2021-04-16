@@ -1,6 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { OutlinedInput , InputAdornment, InputBase } from '@material-ui/core';
+import SearchIcon from '@material-ui/icons/Search';
+
 class HeroSection extends React.Component {
   constructor(props) {
     super(props);
@@ -29,20 +32,22 @@ class HeroSection extends React.Component {
             <div className="row align-items-center justify-content-center">
               <div className="col-md-9 col-lg-7">
                 <div className="page-header-content text-white text-center pt-sm-5 pt-md-5 pt-lg-0">
-                  <h1 className="text-white mb-0">FAQ Page</h1>
-                  <div className="custom-breadcrumb">
-                    <ol className="breadcrumb d-inline-block bg-transparent list-inline py-0">
-                      <li className="list-inline-item breadcrumb-item">
-                        <a href="/#">Home</a>
-                      </li>
-                      <li className="list-inline-item breadcrumb-item">
-                        <a href="/#">Pages</a>
-                      </li>
-                      <li className="list-inline-item breadcrumb-item active">
-                        FAQ
-                      </li>
-                    </ol>
-                  </div>
+                  <h1 className="text-white mb-0">FAQ</h1>
+                  <InputBase
+                      id="standard-adornment-password"
+                      placeholder="Search for your problem"
+                      className="custom-search"
+                      style={{color: 'white'}}
+                      endAdornment={
+                            <InputAdornment position="end">
+                                <div className="icon-search">
+                                    <SearchIcon
+                                        style={{color: '#0A4CB0'}}
+                                    />
+                                </div>
+                            </InputAdornment>
+                      }
+                  />
                 </div>
               </div>
             </div>

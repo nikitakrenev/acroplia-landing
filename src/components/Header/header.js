@@ -56,11 +56,11 @@ class Header extends React.Component {
                       {headerSection.pricing}
                     </a>
                   </li>
-                  {/*<li className="nav-item d-flex align-items-center">*/}
-                  {/*  <a className="nav-link" href="faq">*/}
-                  {/*    {headerSection.faq}*/}
-                  {/*  </a>*/}
-                  {/*</li>*/}
+                  <li className="nav-item d-flex align-items-center">
+                    <a className="nav-link" href="faq">
+                      {headerSection.faq}
+                    </a>
+                  </li>
                   <li className="nav-item d-flex align-items-center">
                     <a className="nav-link page-scroll" href={isHomeHeader ? "#about" : "home#about" }>
                       {headerSection.about}

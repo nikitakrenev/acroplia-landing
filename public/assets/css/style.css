@@ -2346,6 +2346,15 @@ select.form-control.has-value{
     border-top: 4px solid transparent;
 }
 
+.card-title {
+    font-family: Source Sans Pro, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #003A90;
+}
+
 .benefits-button {
     color: black;
 }
@@ -2365,6 +2374,15 @@ select.form-control.has-value{
 }
 
 .table-text{
+    color: #262626;
+}
+
+.price-month-tag {
+    font-family: Source Sans Pro, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
     color: #262626;
 }
 
@@ -2464,6 +2482,27 @@ select.form-control.has-value{
     box-shadow: 0 1rem 3rem rgba(31,45,61,.125)!important;
     transform: translate(0, -5px);
     border-top: 4px solid #9629e6 !important;
+}
+
+.label-checked-dark {
+    font-family: Source Sans Pro, serif;
+    font-size: 18px;
+    line-height: 23px;
+    color: #003A90;
+}
+
+.label-checked-light {
+    font-family: Source Sans Pro, serif;
+    font-size: 18px;
+    line-height: 23px;
+    color: #0A4CB0;
+}
+
+.label-unchecked {
+    font-family: Source Sans Pro, serif;
+    font-size: 18px;
+    line-height: 23px;
+    color: #262626;
 }
 
 
@@ -3281,6 +3320,25 @@ blockquote:before {
     opacity: 0.7;
 }
 
+.custom-search {
+    height: 36px;
+    width: 320px;
+    padding-left: 12px;
+    margin-top: 17px;
+    overflow: hidden;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+}
+
+.icon-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 40px;
+    background-color: white;
+}
 
 /*=========================================
             25. BLOG SECTION CSS
@@ -3635,4 +3693,101 @@ button, [type="button"], [type="reset"], [type="submit"] {
 .scroll-target{
     position: absolute;
     margin-top: -70px;
+}
+
+/*=========================================
+            25. BLOG SECTION CSS
+============================================*/
+.faq-section {
+    padding-top: 57px;
+    padding-bottom: 100px;
+}
+
+.faq-nav {
+    padding-top: 15px;
+    width: 386px;
+}
+
+.faq-nav ul {
+    list-style: disc inside;
+}
+
+.faq-nav ul li {
+    padding-left: 8px;
+    font-family: Source Sans Pro, serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6B6B6B;
+}
+
+.faq-nav .list-item {
+    padding: 4px 0;
+}
+
+.faq-nav .list-item:hover {
+    background-color: inherit;
+}
+
+.faq-nav .list-item .list-item-text {
+    font-family: Source Sans Pro, serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: black;
+}
+
+.faq-article {
+    max-width: 474px;
+}
+
+.faq-article > h2 {
+    margin-bottom: 30px;
+    font-family: Source Sans Pro, serif;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    color: #6B6B6B;
+}
+
+.faq-article > p {
+    margin-bottom: 7px;
+    font-family: Source Sans Pro, serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+    color: #6B6B6B;
+}
+
+.faq-article > img {
+    margin-top: 23px;
+}
+
+.faq-article-forms {
+    margin: 15px 0 0 0;
+}
+
+.faq-article-buttons {
+    display: flex;
+    margin-top: 28px;
+}
+
+.faq-article-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 33px;
+    cursor: pointer;
+    padding: 5px 12px !important;
+    border-radius: 5px;
+    background: #6B6B6B;
+    border: none;
+}
+
+.faq-article-button > span {
+    font-family: Source Sans Pro, serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
 }
