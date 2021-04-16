@@ -184,7 +184,7 @@ class PricingAcroplia extends React.Component {
                                     }
                                     onClick={(event => this.showBenefits(event))}
                                 >
-                                  {_package.isFeatured ? priceSection.toTry: priceSection.signIn}
+                                  {_package.isFeatured ? priceSection.toTry: priceSection.signIn }
                                 </a>
                                 :
                                 <>
